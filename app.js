@@ -10,7 +10,7 @@ var ConnectionString = "mongodb://Your_Connection_data";
 MongoClient.connect(ConnectionString,
     function(err, db){
     if(!err){
-        console.log("You are connected 1");
+        console.log("You are connected.");
         var cursor = db.collection('post').find({"content":"abc"});
         cursor.each(
             function(err, doc){
